@@ -1,0 +1,27 @@
+<div>
+  <h4 class="content-subhead">Name: <%= @name.upcase %></h4>
+</div>
+
+<div>
+  <h4 class="content-subhead">Email address:</h4>
+    <ul>
+        <li><%= @email %></li>
+    </ul>
+  <h4 class="content-subhead">Interests:</h4>
+    <ul>
+        <li><%= format_interests(@interests) %></li>
+    </ul>
+</div>
+
+<div>
+  <h4 class="content-subhead">Other users</h4>
+  <ul>
+    <% @users_and_interests.each do |user, _| %>
+      <% unless user == @name %>
+        <li class="pure-menu-item">
+          <a href="/users/<%= user %>"><%= user.capitalize %></a>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>

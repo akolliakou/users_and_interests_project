@@ -1,0 +1,11 @@
+<h3 class="content-subhead"><%= @title %></h3>
+
+<div class="pure-menu">
+  <ul class="pure-menu-list">
+    <% @users_and_interests.each do |user, _| %>
+      <li class="pure-menu-item">
+        <a href="/users/<%= user %>" class="pure-menu-link"><%= user.capitalize %></a>
+      </li>
+    <% end %>
+  </ul>
+</div>
