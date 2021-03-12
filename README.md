@@ -1,1 +1,1 @@
-# users_and_interests_project
+Launch School's RB175 code challenge - 'users and interests'
